@@ -6113,6 +6113,13 @@ button.close {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+  .modal-dialog-large {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);

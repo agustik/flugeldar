@@ -102,7 +102,7 @@
     <!-- Callout -->
     <div class="callout">
       <div class="vert-text">
-        <h1>A Dramatic Text Area</h1>
+        <!--<h1>A Dramatic Text Area</h1>-->
       </div>
     </div>
     <!-- /Callout -->
@@ -195,6 +195,25 @@
     </footer>
     <!-- /Footer -->
 
+    <!-- Modal-->
+    <div id="marketing_modal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+      <div class="modal-dialog-large">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">Haus</h4>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Loka</button>
+          </div>
+
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+    <!--/Modal-->
+
     <!-- JavaScript -->
     <script src="./assets/js/jquery-1.10.2.js"></script>
     <script src="./assets/js/bootstrap.js"></script>
@@ -231,6 +250,14 @@
             }
           }
         });
+      });
+
+
+      $('.portfolio-item a[href="#"]').click(function (e){
+        e.preventDefault();
+          $('#marketing_modal').modal('show');
+        return false;
+
       });
     </script>
 
