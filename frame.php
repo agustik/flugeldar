@@ -42,8 +42,8 @@
 
       console.log(width, elements);
 
-      elements.comments.attr('data-width', width.video);
-      video.comments.attr('width', width.comments);
+      elements.video.attr('data-width', width.video);
+      elements.comments.attr('width', width.comments);
     </script>
     <div id="fb-root"></div>
 <script>(function(d, s, id) {
