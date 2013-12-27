@@ -32,8 +32,8 @@
     ?>
       var client = <?php print $width; ?>;
       var elements = {
-        video : $('video-frame iframe'),
-        comments : $('video-comments .fb-comments')
+        video : $('.video-frame iframe'),
+        comments : $('.video-comments .fb-comments')
       }
       var width = {
           video   : client * 0.75,
