@@ -241,14 +241,7 @@
         });
     </script>
     <script>
-    $(document).ready(function(){
-      var iframe = $('.video-frame'),
-          iframe_width = iframe.width(),
-          src = iframe.attr('src');
 
-          src = src + "?client-width=" + iframe_width;
-          iframe.attr('src', src);
-    });
 
     /**
     Sitebar links.
@@ -286,7 +279,16 @@
   js.src = "https://connect.facebook.net/is_IS/all.js#xfbml=1&appId=251063381611215";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+(function(element){
+  var iframe = $(element),
+      width = $(document).width(),
+      src = iframe.attr('src');
+      src = src + "?client-width=" + width;
+    iframe.attr('src', src);
+  }('.video-frame'));
 
+</script>
 
   </body>
 
