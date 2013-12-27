@@ -17,7 +17,7 @@
   </head>
   <body>
     <div class="col-md-9 video-frame">
-              <iframe width="560" style="min-height:500px;" src="https://www.youtube.com/embed/lh6SBW4uGTY" frameborder="0" allowfullscreen></iframe>
+              <iframe width="560" src="https://www.youtube.com/embed/lh6SBW4uGTY" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="col-md-3 video-comments">
               <div class="fb-comments" data-href="https://edge.is" data-numposts="5" data-colorscheme="light" ></div>
@@ -42,8 +42,8 @@
 
       console.log(width, elements);
 
-      elements.video.attr('data-width', width.video);
-      elements.comments.attr('width', width.comments);
+      elements.comments.attr('data-width', width.video);
+      elements.video.attr('width', width.comments);
     </script>
     <div id="fb-root"></div>
 <script>(function(d, s, id) {
