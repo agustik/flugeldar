@@ -30,7 +30,7 @@
     <?php 
       $width = (array_key_exists('client-width', $_GET)) ? $_GET['client-width'] : 1920;
     ?>
-      var client_width = <?php print $width; ?>
+      var client_width = <?php print $width; ?>;
       video_width = client_width * 0.75;
       comments_width = client_width * 0.25;
 
