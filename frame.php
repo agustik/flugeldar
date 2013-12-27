@@ -28,7 +28,7 @@
     <script src="./assets/js/bootstrap.js"></script>
     <script type="text/javascript">
     <?php 
-      $width = (array_key_exists('client-width', $_GET)) ? $_GET['client-width'] : 1920;
+      $width = (array_key_exists('client-width', $_GET)) ? $_GET['client-width'] : 1400;
     ?>
       var client = <?php print $width; ?>;
       var elements = {
