@@ -30,14 +30,20 @@
     <?php 
       $width = (array_key_exists('client-width', $_GET)) ? $_GET['client-width'] : 1920;
     ?>
-      var client_width = <?php print $width; ?>;
-      video_width = client_width * 0.75;
-      comments_width = client_width * 0.25;
+      var elements = {
+        video : $('video-frame iframe'),
+        comments : $('video-comments .fb-comments')
+      }
+      var width = {
+          client  : <?php print $width; ?>,
+          video   : this.client * 0.75,
+          comments: this.client * 0.25
+        }
 
-      console.log(client_width, comment_element, video_width);
+      console.log(width, elements);
 
-      comment_element.attr('data-width', comments_width);
-      video_element.attr('width', video_width);
+      elements.comments.attr('data-width', width.video);
+      video.comments.attr('width', width.comments);
     </script>
     <div id="fb-root"></div>
 <script>(function(d, s, id) {
