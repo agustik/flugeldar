@@ -4,6 +4,8 @@
 Global config
 **/
 
+uuuuuurrrr should not update...............
+
 define('DB_PDO_TYPE', 'mysql');
 define('DB_DATABASE', 'database');
 define('DB_USERNAME', 'database_user');
