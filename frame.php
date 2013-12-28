@@ -16,7 +16,7 @@
     <link href="./assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="col-md-7 video-frame">
+    <div class="col-md-8 video-frame">
               <iframe width="560" src="https://www.youtube.com/embed/lh6SBW4uGTY" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="col-md-4 video-comments">
