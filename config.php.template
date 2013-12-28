@@ -2,6 +2,10 @@
 
 /**
 Global config
+
+Rename this file to config.php and add fill out your database config.
+
+Supported database is mysql, but postgres should work... (in theory)
 **/
 
 
