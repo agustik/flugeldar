@@ -30,13 +30,13 @@
     <?php 
       $width = (array_key_exists('client-width', $_GET)) ? $_GET['client-width'] : 1400;
     ?>
-      var client = <?php print $width; ?> * 0.8;
+      var client = <?php print $width; ?> * 0.80;
       var elements = {
         video : $('.video-frame iframe'),
         comments : $('.video-comments .fb-comments')
       }
       var width = {
-          video   : client * 0.7,
+          video   : client * 0.65,
           comments: client * 0.3
         }
 
