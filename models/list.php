@@ -132,6 +132,11 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     </script>
+    <script type="text/javascript">
+    $(document).tooltip({
+      selector : '[data-toggle="tooltip"]'
+    });
+    </script>
   </body>
 
 </html>

@@ -164,6 +164,10 @@
   }(document, 'script', 'facebook-jssdk'));
   </script>
   <script>
+$(document).tooltip({
+  selector : '[data-toggle="tooltip"]'
+});
+  
   videojs.options.flash.swf = "./assets/video-js/video-js.swf"
   </script>
   </body>
