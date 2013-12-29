@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php print $locale->title; ?></title>>
+    <title><?php print $locale->title; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/css/bootstrap.css" rel="stylesheet">
@@ -114,7 +114,7 @@
       <div class="row">
 
         <div class="col-lg-12">
-          <h3 class="page-header">Skoaðu þetta...</h3>
+          <h3 class="page-header">Skoðaðu þetta...</h3>
         </div>
         <?php
         $items = $db->GetRandomItems(4);
