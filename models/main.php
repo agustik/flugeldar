@@ -76,7 +76,7 @@
         <div class="row">
           <?php
 
-            $items = $db->GetUtkoll()
+            $items = $db->GetUtkoll();
 
             foreach ($items as $item ) {
               $name = $item['name'];
