@@ -66,6 +66,8 @@
 
               $memcache->Store($key, $v, 0);
              }
+             var_dump($v);
+
              $video_src = $v['src'];
 
              $poster  =   "./assets/img/flugelda-icon/750x500/".$video_src.".png";
@@ -84,7 +86,7 @@
         </div>
 
         <div class="col-md-4">
-          <div class="fb-comments" data-href="<?php print CurrentUrl(); ?>" data-numposts="5" data-colorscheme="light" ></div>
+          <div class="fb-comments" data-href="<?php print CurrentUrl(); ?>" data-numposts="5" data-colorscheme="light" data-width="390" ></div>
         </div>
 
       </div>

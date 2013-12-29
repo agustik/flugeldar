@@ -58,6 +58,7 @@ class db {
 			$stmt = $db->prepare($query);
 	        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 	        $stmt->execute();
+	        $pdoresult = $stmt->fetch(PDO::FETCH_ASSOC);
 	        $result = array(
                 'src' => $pdoresult['src'],
                 'name' => $pdoresult['name'],
