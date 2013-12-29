@@ -69,7 +69,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-md-offset-4 text-center">
-            <h2>Our Services</h2>
+            <h2>Útköll á árinu</h2>
             <hr>
           </div>
         </div>
@@ -81,7 +81,7 @@
             foreach ($items as $item ) {
               $name = $item['name'];
               $date = $item['is_date'];
-              $html = "<div class='col-md-1 col-md-offset-1 text-center'><div class='service-item' data-toggle='tooltip' title='$date - $name'><i class='service-icon fa fa-map-marker'></i></div></div>";
+              $html = "<div class='col-md-1 text-center'><div class='service-item' data-toggle='tooltip' title='$date - $name'><i class='service-icon fa fa-map-marker'></i></div></div>";
               print $html;
             }
            ?>
