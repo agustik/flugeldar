@@ -58,11 +58,13 @@ class db {
 			$stmt = $db->prepare($query);
 	        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 	        $stmt->execute();
-	        $result = array();
-
-			while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
-			    $result[] = $row; 
-			}
+	        $result = array(
+                'src' => $pdoresult['src'],
+                'name' => $pdoresult['name'],
+                'thumbnail' => $pdoresult['thumbnail'],
+                'id' => (int)$pdoresult['id'],
+                'youtube' => $pdoresult['youtube'],
+            );
 			$db = null;
 			return $result;
 		}catch (PDOException $e) {

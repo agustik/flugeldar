@@ -63,12 +63,14 @@
               $v = $cache;
              }else{
               $v = $db->GetVideo($video);
+
               $memcache->Store($key, $v, 0);
              }
+             $video_src = $v['src'];
 
-             $poster  =   "./assets/img/flugelda-icon/750x500/".$v.".png";
-             $mp4     =   "./assets/video/mp4/".  $v.".mp4";
-             $webm    =   "./assets/video/webm/". $v.".webm";
+             $poster  =   "./assets/img/flugelda-icon/750x500/".$video_src.".png";
+             $mp4     =   "./assets/video/mp4/".  $video_src.".mp4";
+             $webm    =   "./assets/video/webm/". $video_src.".webm";
 
           ?>
           <!--<img class="img-responsive" src="http://placehold.it/750x500">-->
