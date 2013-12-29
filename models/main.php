@@ -115,7 +115,7 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
             <div class="portfolio-item">
-              <a href="./?view=list.php&type=cake"><img class="img-portfolio img-responsive" src="./assets/img/shooting.png"></a>
+              <a href="./?view=list.php&type=cake"><img class="img-portfolio img-responsive" src="./assets/img/cake.png"></a>
               <h4>Skotkökur</h4>
             </div>
           </div>
@@ -129,13 +129,13 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
             <div class="portfolio-item">
-              <a href="./?view=list.php&type=torch"><img class="img-portfolio img-responsive" src="./assets/img/torch.jpg"></a>
+              <a href="./?view=list.php&type=torch"><img class="img-portfolio img-responsive" src="./assets/img/torch.png"></a>
               <h4>Blys</h4>
             </div>
           </div>
           <div class="col-md-4 text-center">
             <div class="portfolio-item">
-              <a href="./?view=list.php&type=packages"><img class="img-portfolio img-responsive" src="./assets/img/pakkar-black.jpg"></a>
+              <a href="./?view=list.php&type=packages"><img class="img-portfolio img-responsive" src="./assets/img/package.png"></a>
               <h4>Pakkar</h4>
             </div>
           </div>
