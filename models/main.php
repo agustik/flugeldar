@@ -43,7 +43,7 @@
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
       <div class="vert-text">
-        <img src="./assets/img/bfa-noback-noshadow.png">
+        <img src="./assets/img/bfa-noback-full-noshadow.png">
         <!--<h1>Björgunarfélag Árborgar !</h1>
          <h3><em>We</em> Build Great Templates, <em>You</em> Make Them Better</h3>
        <a href="#about" class="btn btn-default btn-lg">Find Out More</a>-->
