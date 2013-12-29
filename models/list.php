@@ -43,8 +43,6 @@
     <div class="container">
       <?php
         $items = $db->GetItems($type, 100);
-        var_dump($items);
-
       ?>
 
       <div class="row">
