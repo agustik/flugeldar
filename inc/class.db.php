@@ -52,7 +52,7 @@ class db {
 		try {
 			$db = $this->dbConnection();
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$query = "SELECT u.name, DATE_FORMAT(u.date, '%d.%m.%Y') AS is_date FROM `utkoll` as u ORDER BY u.date ASC";
+			$query = "SELECT u.priority, u.name, DATE_FORMAT(u.date, '%d.%m.%Y') AS is_date FROM `utkoll` as u ORDER BY u.date ASC";
 			$stmt = $db->prepare($query);
             $stmt->execute();
 			$result = array();

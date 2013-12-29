@@ -75,13 +75,18 @@
         </div>
         <div class="row">
           <?php
-
-            $items = $db->GetUtkoll();
-
+            $key = md5('utkoll');
+            if($cache = $memcache->Get($key)){
+              $items = $cache;
+            }else{
+              $items = $db->GetUtkoll();
+              $memcache->Store($key, $items, 0);
+            }
             foreach ($items as $item ) {
               $name = $item['name'];
+              $priority = $item['priority'];
               $date = $item['is_date'];
-              $html = "<div class='col-md-1 text-center'><div class='service-item' data-toggle='tooltip' title='$date - $name'><i class='service-icon fa fa-map-marker'></i></div></div>";
+              $html = "<div class='col-md-1 text-center'><div class='service-item' data-toggle='tooltip' title='$priority > $date - $name'><i class='service-icon fa fa-map-marker'></i></div></div>";
               print $html;
             }
            ?>
