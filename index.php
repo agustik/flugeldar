@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 
  include_once('config.php');
- $view = (array_key_exists('page', $_GET)) ? $_GET['page'] : "main.php";
+ $view = (array_key_exists('view', $_GET)) ? $_GET['view'] : "main.php";
  $type = (array_key_exists('type', $_GET)) ? $_GET['type'] : "cake";
 
  /*
@@ -16,6 +16,10 @@ error_reporting(E_ALL);
 
  // include_once DIR_BASE . 'inc/class.db.php';
  // $db = new db;
- include_once DIR_BASE . 'models/' . $view;
+
+$view = DIR_BASE . 'models/' . $view;
+var_dump($view);
+
+ include_once $view;
 
 ?>
