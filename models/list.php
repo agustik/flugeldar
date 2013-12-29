@@ -80,7 +80,7 @@
             if (!file_exists($image)){
               $image = "./assets/img/" . $type .".png";
             }
-         print "<div class='col-md-3 portfolio-item'><a href='$link'><img class='img-responsive' src='$image'></a></div>";
+         print "<div class='col-md-3 portfolio-item'><a href='$link' data-toggle='tooltip' title='$name'><img class='img-responsive' src='$image'></a></div>";
          }
         ?>
       </div>

@@ -127,7 +127,7 @@
             if (!file_exists($image)){
               $image = "./assets/img/" . $type .".png";
             }
-            print " <div class='col-sm-3 col-xs-6'><a href='$link'><img class='img-responsive portfolio-item' src='$image'></a></div>";
+            print " <div class='col-sm-3 col-xs-6'><a href='$link'  data-toggle='tooltip' title='$name'><img class='img-responsive portfolio-item' src='$image'></a></div>";
          }
         ?>
 
