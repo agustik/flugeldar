@@ -6,13 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php print $locale['title']; ?></title>
+    <title><?php var_dump($locale); print $locale->title; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS for the '4 Col Portfolio' Template -->
-    <link href="./assets/css/4-col-portfolio.css" rel="stylesheet">
+    <link href="./assets/css/portfolio-item.css" rel="stylesheet">
   </head>
 
   <body>

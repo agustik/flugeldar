@@ -1,8 +1,7 @@
 <?php
 	
-	$locale = array(
-		'project_name'=>'Flugeldar',
-		'company_name'=>'Björgunarfélag Árborgar',
-		);
+	$locale = new stdClass()
+	$locale->project_name 		='Flugeldar';
+	$locale->title				='Björgunarfélag Árborgar';
 
 ?>
