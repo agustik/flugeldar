@@ -25,14 +25,16 @@ class db {
         return $pdo;
 	}
 
-	public function GetItems($type){
+	public function GetItems($type, $limit = 100){
+		$limit = (int)$limit;
 		$result = false;
 		try {
 			$db = $this->dbConnection();
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$query = "SELECT * FROM `vorur` v WHERE v.type = :type";
+			$query = "SELECT * FROM `vorur` v WHERE v.type = :type LIMIT :l ";
 			$stmt = $db->prepare($query);
 	        $stmt->bindParam(':type', $type, PDO::PARAM_STR);
+	        $stmt->bindParam(':l', $type, PDO::PARAM_INT);
 	        $stmt->execute();
 	        $result = array();
 
