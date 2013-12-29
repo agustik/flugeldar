@@ -79,7 +79,7 @@
           <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
             controls preload="auto" width="750" height="500"
             poster="<?php print $poster; ?>"
-            data-setup="<?php print $parameters; ?>">
+            data-setup='<?php print $parameters; ?>'>
            <source src="<?php print $mp4; ?>" type='video/mp4' />
            <source src="<?php print $webm; ?>" type='video/webm' />
           </video>
