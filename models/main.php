@@ -32,9 +32,9 @@
         <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
         <li class="sidebar-brand"><a href="./"></a></li>
         <li><a href="#top">Forsíða</a></li>
-        <li><a href="#about">servies .. Útköll á árinu ?</a></li>
-        <li><a href="#services">.....</a></li>
-        <li><a href="#portfolio">Úrval</a></li>
+        <!--<li><a href="#about"></a></li>-->
+        <li><a href="#services">Útköll á árinu</a></li>
+        <li><a href="#portfolio">Vöruúrval</a></li>
         <li><a href="#contact">Sölustaðir</a></li>
       </ul>
     </div>
@@ -51,7 +51,7 @@
     </div>
     <!-- /Full Page Image Header Area -->
   
-    <!-- Intro -->
+    <!-- Intro 
     <div id="about" class="intro">
       <div class="container">
         <div class="row">
