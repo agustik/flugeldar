@@ -29,6 +29,7 @@ class db {
 		$result = false;
 		try {
 			$db = $this->dbConnection();
+			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$query = "SELECT * FROM 'vorur' WHERE type = :type";
 			$stmt = $db->prepare($query);
 	        $stmt->bindParam(':type', $type, PDO::PARAM_STR);
@@ -53,6 +54,7 @@ class db {
 		$result = false;
 		try {
 			$db = $this->dbConnection();
+			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$query = "SELECT * FROM 'utkoll'";
 			$stmt = $db->prepare($query);
             $stmt->execute();
