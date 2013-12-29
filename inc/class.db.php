@@ -67,6 +67,9 @@ class db {
                 'thumbnail' => $pdoresult['thumbnail'],
                 'id' => (int)$pdoresult['id'],
                 'youtube' => $pdoresult['youtube'],
+                'description' => $pdoresult['description'],
+                'views' =>		$pdoresult['views'],
+                
             );
 			$db = null;
 			return $result;
