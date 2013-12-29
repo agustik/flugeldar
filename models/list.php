@@ -60,6 +60,10 @@
             $name = $item['name'];
             $src = $item['src'];
             $image = "./assets/img/flugelda-icon/750x500/". $src .".png";
+            if (!file_exists($image)){
+              $image = "./assets/img/" . $type .".png";
+            }
+
               print "<div class='col-md-3 portfolio-item'><a href='portfolio-item.html'><img class='img-responsive' src='$image'></a></div>";
          }
         ?>
