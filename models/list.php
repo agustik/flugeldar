@@ -61,7 +61,7 @@
 
           $limit = 4; $i = 0;
           if(sizeof($items)=0){
-            print "<div class='text-center'><h1>Úps ! Ekkert hér, kíktu við til okkar :)</h1></div>"
+            print "<div class='text-center'><h1>Úps ! Ekkert hér, kíktu við til okkar :)</h1></div>";
           }
            foreach ($items as $item) {
             $name = $item['name'];
