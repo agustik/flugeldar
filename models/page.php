@@ -9,10 +9,10 @@
     <title><?php print $locale['title']; ?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS for the '4 Col Portfolio' Template -->
-    <link href="css/4-col-portfolio.css" rel="stylesheet">
+    <link href="./assets/css/4-col-portfolio.css" rel="stylesheet">
   </head>
 
   <body>
@@ -145,8 +145,8 @@
     </div><!-- /.container -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="./assets/js/jquery-1.10.2.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
 
   </body>
 
