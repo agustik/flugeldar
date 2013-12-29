@@ -57,9 +57,12 @@ class db {
 			$stmt = $db->prepare($query);
             $stmt->execute();
 			$result = array();
-			while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
+			/*while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
 			    $result[] = $row; 
-			}
+			}*/
+			while($row = $stmt->fetch()) {
+		        print_r($row);
+		    }
 			$db = null;
 			return $result;
 		}catch (PDOException $e) {
