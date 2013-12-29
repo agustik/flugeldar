@@ -7,7 +7,11 @@
     <meta name="author" content="">
 
     <title><?php print $locale->title; ?></title>
-
+    <style type="text/css">
+    .img-responsive {
+      max-height: 143px;
+      }
+    </style>
     <!-- Bootstrap core CSS -->
     <link href="./assets/css/bootstrap.css" rel="stylesheet">
 
@@ -64,7 +68,7 @@
               $image = "./assets/img/" . $type .".png";
             }
 
-              print "<div class='col-md-3 portfolio-item'><a href='portfolio-item.html'><img class='img-responsive' src='$image'></a></div>";
+              print "<div class='col-md-3 portfolio-item'><a href='#'><img class='img-responsive' src='$image'></a></div>";
          }
         ?>
       </div>
