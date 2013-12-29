@@ -23,21 +23,37 @@ class db {
 	}
 
 	public function GetItems($type){
-		$db = $this->dbConnection();
-		$query = "SELECT * FROM 'vorur' WHERE type = :type";
+		$result = false;
+		try {
+			$db = $this->dbConnection();
+			$query = "SELECT * FROM 'vorur' WHERE type = :type";
+			$stmt = $db->prepare($query);
+	        $stmt->bindParam(':type', $type, PDO::PARAM_STR);
+	        $stmt->execute();
+	        $result = array();
 
+			while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
+			    $result = $row; 
+			}
+			$db = null;
+			return $result;
+		}catch (PDOException $e) {
+			echo "Error " . $e->GetMessage();
+            $db = null;
+            die();
+		}
 	}
 	public function GetUtkoll(){
 		$result = false;
 		try {
 			$db = $this->dbConnection();
 			$query = "SELECT * FROM 'utkoll'";
-			$sth = $db->query($query);  
-			  
-			# setting the fetch mode  
-			$sth->setFetchMode(PDO::FETCH_ASSOC);  
+			$stmt = $db->prepare($query);
+            $stmt->bindParam(':kt', $kt, PDO::PARAM_STR);
+            $stmt->execute();
 			$result = array();
-			while($row = $sth->fetch()) {  
+
+			while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
 			    $result = $row; 
 			}
 			$db = null;
