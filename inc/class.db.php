@@ -31,7 +31,7 @@ class db {
 		try {
 			$db = $this->dbConnection();
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$query = "SELECT * FROM `vorur` v WHERE v.type = :type LIMIT :l ";
+			$query = "SELECT * FROM `vorur` v WHERE v.type = :type AND v.enabled = 'true' LIMIT :l ";
 			$stmt = $db->prepare($query);
 	        $stmt->bindParam(':type', $type, PDO::PARAM_STR);
 	        $stmt->bindParam(':l', $limit , PDO::PARAM_INT);
@@ -69,7 +69,7 @@ class db {
                 'youtube' => $pdoresult['youtube'],
                 'description' => $pdoresult['description'],
                 'views' =>		$pdoresult['views'],
-                
+
             );
 			$db = null;
 			return $result;
@@ -85,7 +85,7 @@ class db {
 		try {
 			$db = $this->dbConnection();
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$query = "SELECT * FROM `vorur` v
+			$query = "SELECT * FROM `vorur` v WHERE v.enabled = 'true'
 						ORDER BY RAND()
 						LIMIT :l";
 			$stmt = $db->prepare($query);
