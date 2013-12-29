@@ -72,7 +72,7 @@
              $poster  =   "./assets/img/flugelda-icon/750x500/".$video_src.".png";
              $mp4     =   "./assets/video/mp4/".  $video_src.".mp4";
              $webm    =   "./assets/video/webm/". $video_src.".webm";
-             $parameters = "{'controls': 'true', 'autoplay' : $autoplay, 'preload' : 'auto' }";
+             $parameters = "{'controls': 'true', 'autoplay' : '$autoplay', 'preload' : 'auto' }";
 
           ?>
           <!--<img class="img-responsive" src="http://placehold.it/750x500">-->
