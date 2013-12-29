@@ -46,7 +46,14 @@
 
     <div class="container">
       <?php
-        $items = $db->GetItems($type, 100);
+        $key = md5("list".$view.$type);
+        if($cache = $memcache->Get($key)){
+          $items = $cache;
+        }else{
+          $items = $db->GetItems($type, 100);
+          $memcache->Store($key, $items, 900);
+        }
+        
       ?>
 
       <div class="row">
@@ -62,7 +69,7 @@
           $limit = 4;
           $i = 0;
           if(sizeof($items) == 0){
-            print "<div class='text-center'><h1>Úps ! Ekkert hér, kíktu við til okkar :)</h1></div>";
+            print "<div class='text-center'><h1>Úps ! Ekkert hér, kíktu við hjá okkur, við erum á Árvegi 1 Selfossi og Smíðaskúrnum stokkseyri.</h1></div>";
           }
            foreach ($items as $item) {
             $name = $item['name'];

@@ -55,11 +55,13 @@
 
              $video_src = $v['src'];
              $name      = $v['name'];
+             $description = $v['description'];
+             $view_count       = $v['views'];
              $poster    =   "./assets/img/flugelda-icon/750x500/".$video_src.".png";
              $mp4       =   "./assets/video/mp4/".  $video_src.".mp4";
              $webm      =   "./assets/video/webm/". $video_src.".webm";
              $parameters= '{"autoplay" : ' . $autoplay. '}';
-
+             $db->BumpViewCount($video);
           ?>
       <!--
           Vidoes..
@@ -85,6 +87,22 @@
            <source src="<?php print $mp4; ?>" type='video/mp4' />
            <source src="<?php print $webm; ?>" type='video/webm' />
           </video>
+          <div >
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#home" data-toggle="tab">Lýsing</a></li>
+              <li class=""><a href="#profile" data-toggle="tab">Upplýsingar</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade active in" id="description">
+                <?php
+                  print $description;
+                ?>
+              </div>
+              <div class="tab-pane fade" id="stats">
+                <p></p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="col-md-4">

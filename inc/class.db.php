@@ -100,6 +100,25 @@ class db {
 		}
 	}
 
+	public function BumpViewCount($video){
+		$video = (int)$video;
+		$result = false;
+		try {
+			$db = $this->dbConnection();
+			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$query = "UPDATE `vorur` v SET v.views = v.views + 1 WHERE v.id = :id";
+			$stmt = $db->prepare($query);
+	        $stmt->bindParam(':id', $video, PDO::PARAM_INT);
+	        $stmt->execute();
+			$db = null;
+			return true;
+		}catch (PDOException $e) {
+			echo "Error " . $e->GetMessage();
+            $db = null;
+            die();
+		}
+	}
+
 	public function GetUtkoll(){
 		$result = false;
 		try {
