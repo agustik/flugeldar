@@ -12,7 +12,7 @@ error_reporting(E_ALL);
  /*
 	Do some cleaning.
  */
- $view = str_replace($view, '#', "");
+ //$view = str_replace($view, '#', "");
 
  // include_once DIR_BASE . 'inc/class.db.php';
  // $db = new db;
