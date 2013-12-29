@@ -32,10 +32,9 @@ class db {
 			$db = $this->dbConnection();
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$query = "SELECT * FROM `vorur` v WHERE v.type = :type LIMIT :l ";
-			echo $query;
 			$stmt = $db->prepare($query);
 	        $stmt->bindParam(':type', $type, PDO::PARAM_STR);
-	        $stmt->bindParam(':l', $type, PDO::PARAM_INT);
+	        $stmt->bindParam(':l', $limit , PDO::PARAM_INT);
 	        $stmt->execute();
 	        $result = array();
 
