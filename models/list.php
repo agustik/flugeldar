@@ -61,10 +61,9 @@
            foreach ($items as $item) {
             $name = $item['name'];
             $src = $item['src'];
-              print "<div class='col-md-3 portfolio-item'><a href='portfolio-item.html'><img class='img-responsive' src='http://placehold.it/750x450'></a></div>";
+            $image = "./assets/img/flugelda-icon/750x500/". $src .".png";
+              print "<div class='col-md-3 portfolio-item'><a href='portfolio-item.html'><img class='img-responsive' src='$image'></a></div>";
          }
-        
-
         ?>
       </div>
 
