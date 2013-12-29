@@ -259,6 +259,25 @@
 $(document).tooltip({
   selector : '[data-toggle="tooltip"]'
 });
+
+(function(){
+  /* Select all tooltips*/
+  var tooltips = $('#services').find('[data-toggle="tooltip"]'),
+    l = tooltips.length;
+    DisplayPopover();
+    setInterval(function(){
+      DisplayPopover();
+    },3000);
+
+    function DisplayPopover(){
+      var random = Math.floor(Math.random() * l) + 1,
+          element = $(tooltips[random]);
+          element.tooltip('show');
+          setTimeout(function(){
+            element.tooltip('hide');
+          },2000)
+    }
+}());
 </script>
 
   </body>
