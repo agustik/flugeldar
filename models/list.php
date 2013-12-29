@@ -45,7 +45,7 @@
       <div class="row">
 
         <div class="col-lg-12">
-          <h1 class="page-header">4 Col Portfolio <small>Showcase Your Work</small></h1>
+          <h1 class="page-header">Vörur</h1>
         </div>
 
       </div>

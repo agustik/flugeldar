@@ -43,21 +43,6 @@
     </nav>
 
     <div class="container">
-      <!--
-          Vidoes..
-        -->
-      <div class="row">
-
-        <div class="col-lg-12">
-          <h1 class="page-header">Portfolio Item <small>Explain Your Work</small></h1>
-        </div>
-
-      </div>
-
-      <div class="row">
-
-        <div class="col-md-8">
-
           <?php
              $key = md5('video' . $video);
              if($cache = $memcache->Get($key)){
@@ -69,13 +54,29 @@
              }
 
              $video_src = $v['src'];
-
-             $poster  =   "./assets/img/flugelda-icon/750x500/".$video_src.".png";
-             $mp4     =   "./assets/video/mp4/".  $video_src.".mp4";
-             $webm    =   "./assets/video/webm/". $video_src.".webm";
-             $parameters = '{"autoplay" : ' . $autoplay. '}';
+             $name      = $v['name'];
+             $poster    =   "./assets/img/flugelda-icon/750x500/".$video_src.".png";
+             $mp4       =   "./assets/video/mp4/".  $video_src.".mp4";
+             $webm      =   "./assets/video/webm/". $video_src.".webm";
+             $parameters= '{"autoplay" : ' . $autoplay. '}';
 
           ?>
+      <!--
+          Vidoes..
+        -->
+      <div class="row">
+
+        <div class="col-lg-12">
+          <h1 class="page-header"><?php echo $name; ?></h1>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-8">
+
+
           <!--<img class="img-responsive" src="http://placehold.it/750x500">-->
           <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
             controls preload="auto" width="750" height="500"
