@@ -59,8 +59,9 @@
       <div class="">
         <?php
 
-          $limit = 4; $i = 0;
-          if(sizeof($items)=0){
+          $limit = 4;
+          $i = 0;
+          if(sizeof($items) == 0){
             print "<div class='text-center'><h1>Úps ! Ekkert hér, kíktu við til okkar :)</h1></div>";
           }
            foreach ($items as $item) {
