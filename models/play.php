@@ -6,13 +6,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Single Portfolio Item Template for Bootstrap 3</title>
+    <title><?php print $locale->title; ?></title>>
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS for the '3 Col Portfolio' Template -->
     <link href="./assets/css/portfolio-item.css" rel="stylesheet">
+    <link href="./assets/video-js/video-js.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -55,7 +56,14 @@
       <div class="row">
 
         <div class="col-md-8">
-          <img class="img-responsive" src="http://placehold.it/750x500">
+          <!--<img class="img-responsive" src="http://placehold.it/750x500">-->
+          <video id="example_video_1" class="video-js vjs-default-skin"
+            controls preload="auto" width="750" height="500"
+            poster="http://video-js.zencoder.com/oceans-clip.png"
+            data-setup='{"example_option":true}'>
+           <source src="./assets/video/mp4/orlygsstadabardagi_2.mp4" type='video/mp4' />
+           <source src="./assets/video/webm/orlygsstadabardagi_2.webm" type='video/webm' />
+          </video>
         </div>
 
         <div class="col-md-4">
@@ -117,7 +125,20 @@
     <!-- JavaScript -->
     <script src="./assets/js/jquery-1.10.2.js"></script>
     <script src="./assets/js/bootstrap.js"></script>
-
+    <script src="./assets/video-js/video.js"></script>
+    <div id="fb-root"></div>
+  <script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/is_IS/all.js#xfbml=1&appId=251063381611215";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script>
+  videojs.options.flash.swf = "./assets/video-js/video-js.swf"
+  </script>
   </body>
 
 </html>
