@@ -56,6 +56,16 @@
       <div class="row">
 
         <div class="col-md-8">
+
+          <?php
+             $key = md5('video' . $video);
+             if($cache = $memcache->Get($key)){
+              $v = $cache;
+             }else{
+              $v = $db->GetVideo($video);
+              $memcache->Store($key, $v, 0);
+             }
+          ?>
           <!--<img class="img-responsive" src="http://placehold.it/750x500">-->
           <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
             controls preload="auto" width="750" height="500"
@@ -67,15 +77,7 @@
         </div>
 
         <div class="col-md-4">
-          <h3>Project Description</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-          <h3>Project Details</h3>
-          <ul>
-            <li>Lorem Ipsum</li>
-            <li>Dolor Sit Amet</li>
-            <li>Consectetur</li>
-            <li>Adipiscing Elit</li>
-          </ul>
+          <div class="fb-comments" data-href="<?php print CurrentUrl(); ?>" data-numposts="5" data-colorscheme="light" ></div>
         </div>
 
       </div>

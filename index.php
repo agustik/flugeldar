@@ -8,7 +8,12 @@ error_reporting(E_ALL);
  include_once('config.php');
  $view = (array_key_exists('view', $_GET)) ? $_GET['view'] : "main.php";
  $type = (array_key_exists('type', $_GET)) ? $_GET['type'] : "cake";
+ $video = (array_key_exists('video', $_GET)) ? $_GET['video'] : false;
 
+
+ function CurrentUrl(){
+ 	return  "http://". $_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI];
+ }
 
 /* Inclue the database */
 include_once DIR_BASE . 'inc/class.db.php';

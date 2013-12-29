@@ -30,7 +30,7 @@ class db {
 		try {
 			$db = $this->dbConnection();
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$query = "SELECT * FROM  `vorur` WHERE type = :type";
+			$query = "SELECT * FROM `vorur` v WHERE v.type = :type";
 			$stmt = $db->prepare($query);
 	        $stmt->bindParam(':type', $type, PDO::PARAM_STR);
 	        $stmt->execute();
@@ -47,6 +47,31 @@ class db {
             die();
 		}
 	}
+
+	public function GetVideo($id){
+		$id = (int)$id;
+		$result = false;
+		try {
+			$db = $this->dbConnection();
+			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$query = "SELECT * FROM `vorur` v WHERE v.id = :id";
+			$stmt = $db->prepare($query);
+	        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+	        $stmt->execute();
+	        $result = array();
+
+			while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
+			    $result[] = $row; 
+			}
+			$db = null;
+			return $result;
+		}catch (PDOException $e) {
+			echo "Error " . $e->GetMessage();
+            $db = null;
+            die();
+		}
+	}
+
 	public function GetUtkoll(){
 		$result = false;
 		try {
