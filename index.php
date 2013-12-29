@@ -14,8 +14,8 @@ error_reporting(-1);
  */
  $view = str_replace($view, '#', "");
 
- include_once DIR_BASE . 'inc/class.db.php';
- $db = new db;
+ // include_once DIR_BASE . 'inc/class.db.php';
+ // $db = new db;
  include_once DIR_BASE . 'models/' . $view;
 
 ?>
