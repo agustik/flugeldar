@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php var_dump($locale); print $locale->title; ?></title>
+    <title><?php print $locale->title; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/css/bootstrap.css" rel="stylesheet">
@@ -111,7 +111,7 @@
       </div>
 
       <hr>
-
+      <!--
       <div class="row text-center">
         
         <div class="col-lg-12">
@@ -126,7 +126,7 @@
           </ul>        
         </div>
 
-      </div>
+      </div>-->
 
     </div><!-- /.container -->
 

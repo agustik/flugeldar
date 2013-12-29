@@ -1,6 +1,6 @@
 <?php
 class db {
-	function dbConnection() {
+	private function dbConnection() {
         $db_pdo_type = DB_PDO_TYPE;
         $db_database = DB_DATABASE;
 		$db_username = DB_USERNAME;
@@ -20,5 +20,32 @@ class db {
             die();
         }
         return $pdo;
+	}
+
+	public function GetItems($type){
+		$db = $this->dbConnection();
+		$query = "SELECT * FROM 'vorur' WHERE type = :type";
+
+	}
+	public function GetUtkoll(){
+		$result = false;
+		try {
+			$db = $this->dbConnection();
+			$query = "SELECT * FROM 'utkoll'";
+			$sth = $db->query($query);  
+			  
+			# setting the fetch mode  
+			$sth->setFetchMode(PDO::FETCH_ASSOC);  
+			$result = array();
+			while($row = $sth->fetch()) {  
+			    $result = $row; 
+			}
+			$db = null;
+			return $result;
+		}catch (PDOException $e) {
+			echo "Error " . $e->GetMessage();
+            $db = null;
+            die();
+		}
 	}
 }

@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php print $locale->title; ?></title>
+
 
     <!-- Bootstrap core CSS -->
     <link href="./assets/css/bootstrap.css" rel="stylesheet">
@@ -69,14 +69,16 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-md-offset-4 text-center">
-            <h2>Our Services</h2>
+            <h2>Útköll á árinu</h2>
             <hr>
           </div>
         </div>
         <div class="row">
-          <?php
-            var_dump($db->GetUtkoll());
-           ?>
+          <div class="col-md-1 col-md-offset-1 text-center">
+            <div class="service-item" data-toggle="tooltip" title="19.1.2012 - F3">
+              <i class="service-icon fa fa-map-marker"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -297,6 +299,10 @@
     iframe.attr('src', src);
   }('.video-frame'));
 
+
+$(document).tooltip({
+  selector : '[data-toggle="tooltip"]'
+})
 </script>
 
   </body>
