@@ -33,7 +33,7 @@ class db {
 	        $result = array();
 
 			while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
-			    $result = $row; 
+			    $result[] = $row; 
 			}
 			$db = null;
 			return $result;
@@ -54,7 +54,7 @@ class db {
 			$result = array();
 
 			while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
-			    $result = $row; 
+			    $result[] = $row; 
 			}
 			$db = null;
 			return $result;
