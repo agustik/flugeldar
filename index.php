@@ -9,7 +9,7 @@ error_reporting(E_ALL);
  $view = (array_key_exists('view', $_GET)) ? $_GET['view'] : "main.php";
  $type = (array_key_exists('type', $_GET)) ? $_GET['type'] : "cake";
  $video = (array_key_exists('video', $_GET)) ? $_GET['video'] : false;
-
+ $autoplay = (array_key_exists('autoplay', $_GET)) ? $_GET['autoplay'] : 'false';
 
  function CurrentUrl(){
  	return  "http://". $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];

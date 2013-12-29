@@ -66,20 +66,20 @@
 
               $memcache->Store($key, $v, 0);
              }
-             var_dump($v);
 
              $video_src = $v['src'];
 
              $poster  =   "./assets/img/flugelda-icon/750x500/".$video_src.".png";
              $mp4     =   "./assets/video/mp4/".  $video_src.".mp4";
              $webm    =   "./assets/video/webm/". $video_src.".webm";
+             $parameters = "{'example_option':'true', 'autoplay' : $autoplay }";
 
           ?>
           <!--<img class="img-responsive" src="http://placehold.it/750x500">-->
           <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
             controls preload="auto" width="750" height="500"
             poster="<?php print $poster; ?>"
-            data-setup='{"example_option":true}'>
+            data-setup="<?php print $parameters; ?>">
            <source src="<?php print $mp4; ?>" type='video/mp4' />
            <source src="<?php print $webm; ?>" type='video/webm' />
           </video>
