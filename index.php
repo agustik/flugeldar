@@ -14,12 +14,11 @@ error_reporting(E_ALL);
  */
  //$view = str_replace($view, '#', "");
 
- // include_once DIR_BASE . 'inc/class.db.php';
- // $db = new db;
+
+include_once DIR_BASE . 'inc/class.db.php';
+$db = new db;
 
 $view = DIR_BASE . 'models/' . $view;
-var_dump($view);
-
- include_once $view;
+include_once $view;
 
 ?>
