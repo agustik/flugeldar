@@ -52,10 +52,8 @@ class db {
 			$db = $this->dbConnection();
 			$query = "SELECT * FROM 'utkoll'";
 			$stmt = $db->prepare($query);
-            $stmt->bindParam(':kt', $kt, PDO::PARAM_STR);
             $stmt->execute();
 			$result = array();
-
 			while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
 			    $result[] = $row; 
 			}
