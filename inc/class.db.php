@@ -17,7 +17,7 @@ class db {
             ;
 
         try {
-            $pdo = new PDO($pdo_dsn, $db_username, $db_password);
+            $pdo = new PDO($pdo_dsn, $db_username, $db_password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")););
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
             die();
