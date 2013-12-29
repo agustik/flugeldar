@@ -76,6 +76,29 @@ class db {
             die();
 		}
 	}
+	public function GetRandomItems($limit){
+		$limit = (int)$limit;
+		$result = false;
+		try {
+			$db = $this->dbConnection();
+			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$query = "SELECT * FROM `vorur` v
+						ORDER BY RAND()
+						LIMIT :l";
+			$stmt = $db->prepare($query);
+	        $stmt->bindParam(':l', $limit, PDO::PARAM_INT);
+	        $stmt->execute();
+	        while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
+			    $result[] = $row; 
+			}
+			$db = null;
+			return $result;
+		}catch (PDOException $e) {
+			echo "Error " . $e->GetMessage();
+            $db = null;
+            die();
+		}
+	}
 
 	public function GetUtkoll(){
 		$result = false;

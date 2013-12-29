@@ -96,26 +96,22 @@
       <div class="row">
 
         <div class="col-lg-12">
-          <h3 class="page-header">Related Projects</h3>
+          <h3 class="page-header">Skoaðu þetta...</h3>
         </div>
-        <!--
-          Other videoes that might be interresting
-        -->
-        <div class="col-sm-3 col-xs-6">
-        	<a href="#"><img class="img-responsive portfolio-item" src="http://placehold.it/500x300"></a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-        	<a href="#"><img class="img-responsive portfolio-item" src="http://placehold.it/500x300"></a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-        	<a href="#"><img class="img-responsive portfolio-item" src="http://placehold.it/500x300"></a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-        	<a href="#"><img class="img-responsive portfolio-item" src="http://placehold.it/500x300"></a>
-        </div>
+        <?php
+        $items = $db->GetRandomItems(4);
+         foreach ($items as $item) {
+            $name = $item['name'];
+            $src = $item['src'];
+            $id = $item['id'];
+            $image = "./assets/img/flugelda-icon/750x500/". $src .".png";
+            $link = "./?view=play.php&video=$id&autoplay=true";
+            if (!file_exists($image)){
+              $image = "./assets/img/" . $type .".png";
+            }
+            print " <div class='col-sm-3 col-xs-6'><a href='$link'><img class='img-responsive portfolio-item' src='$image'></a></div>";
+         }
+        ?>
 
       </div>
 
