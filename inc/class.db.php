@@ -52,7 +52,7 @@ class db {
 		try {
 			$db = $this->dbConnection();
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$query = "SELECT * FROM `utkoll`";
+			$query = "SELECT u.ame, DATE_FORMAT(u.date, '%dd.%mm.%yyy') AS is_date FROM `utkoll` as u";
 			$stmt = $db->prepare($query);
             $stmt->execute();
 			$result = array();

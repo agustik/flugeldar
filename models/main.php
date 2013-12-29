@@ -75,7 +75,14 @@
         </div>
         <div class="row">
           <?php
-            var_dump($db->GetUtkoll());
+
+            $items = $db->GetUtkoll()
+
+            foreach ($items as $item ) {
+              $name = $item['name'];
+              $date = $item['is_date'];
+              $html = "<div class='col-md-1 col-md-offset-1 text-center'><div class='service-item' data-toggle='tooltip' title='$date - $name'><i class='service-icon fa fa-map-marker'></i></div></div>";
+            }
            ?>
         </div>
       </div>
