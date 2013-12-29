@@ -1,6 +1,9 @@
 <?php
 	
- error_reporting(true);
+error_reporting(E_ALL);
+
+// Report all PHP errors
+error_reporting(-1);
 
  include_once('config.php');
  $view = (array_key_exists('page', $_GET)) ? $_GET['page'] : "main.php";
