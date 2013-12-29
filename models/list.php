@@ -66,6 +66,7 @@
               print "<div class='row'>";
             }
               print "<div class='col-md-3 portfolio-item'><a href='portfolio-item.html'><img class='img-responsive' src='http://placehold.it/750x450'></a></div>";
+            $i++;
             if($i = 3){
               print "</div>";
               $i = 0;
