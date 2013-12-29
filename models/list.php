@@ -63,12 +63,14 @@
            foreach ($items as $item) {
             $name = $item['name'];
             $src = $item['src'];
+            $id = $item['id'];
             $image = "./assets/img/flugelda-icon/750x500/". $src .".png";
+            $link = "./?view=play.php&video=$id&autoplay=true";
             if (!file_exists($image)){
               $image = "./assets/img/" . $type .".png";
             }
 
-              print "<div class='col-md-3 portfolio-item'><a href='#'><img class='img-responsive' src='$image'></a></div>";
+              print "<div class='col-md-3 portfolio-item'><a href='$link'><img class='img-responsive' src='$image'></a></div>";
          }
         ?>
       </div>
