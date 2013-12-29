@@ -121,7 +121,7 @@
           </div>
           <div class="col-md-4 text-center">
             <div class="portfolio-item">
-              <a href="./?view=list.php&type=rockets"><img class="img-portfolio img-responsive" src="./assets/img/rocket.png"></a>
+              <a href="./?view=list.php&type=rocket"><img class="img-portfolio img-responsive" src="./assets/img/rocket.png"></a>
               <h4>Rakettur</h4>
             </div>
           </div>

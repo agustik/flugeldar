@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
             <li><a href="./?view=list.php&type=cake">Skotkökur</a></li>
-            <li><a href="./?view=list.php&type=rockets">Rakettur</a></li>
+            <li><a href="./?view=list.php&type=rocket">Rakettur</a></li>
             <li><a href="./?view=list.php&type=torch">Blys</a></li>
             <li><a href="./?view=list.php&type=packages">Blys</a></li>
           </ul>
