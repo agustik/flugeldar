@@ -59,7 +59,7 @@
           <!--<img class="img-responsive" src="http://placehold.it/750x500">-->
           <video id="example_video_1" class="video-js vjs-default-skin"
             controls preload="auto" width="750" height="500"
-            poster="http://video-js.zencoder.com/oceans-clip.png"
+            poster="./assets/img/flugelda-icon/750x500/orlygsstadabardagi_2.png"
             data-setup='{"example_option":true}'>
            <source src="./assets/video/mp4/orlygsstadabardagi_2.mp4" type='video/mp4' />
            <source src="./assets/video/webm/orlygsstadabardagi_2.webm" type='video/webm' />
