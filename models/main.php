@@ -86,7 +86,7 @@
               $name = $item['name'];
               $priority = $item['priority'];
               $date = $item['is_date'];
-              $html = "<div class='col-md-1 text-center'><div class='service-item' data-toggle='tooltip' title='$priority > $date - $name'><i class='service-icon fa fa-map-marker'></i></div></div>";
+              $html = "<div class='col-md-1 text-center'><div class='service-item' data-toggle='tooltip' title='$date - $priority > $name'><i class='service-icon fa fa-map-marker'></i></div></div>";
               print $html;
             }
            ?>
@@ -115,13 +115,13 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="./assets/img/shooting.png"></a>
+              <a href="./?view=list.php&type=cake"><img class="img-portfolio img-responsive" src="./assets/img/shooting.png"></a>
               <h4>Skotkökur</h4>
             </div>
           </div>
           <div class="col-md-4 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="./assets/img/rocket.png"></a>
+              <a href="./?view=list.php&type=rockets"><img class="img-portfolio img-responsive" src="./assets/img/rocket.png"></a>
               <h4>Rakettur</h4>
             </div>
           </div>
@@ -129,13 +129,13 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="./assets/img/torch.jpg"></a>
+              <a href="./?view=list.php&type=torch"><img class="img-portfolio img-responsive" src="./assets/img/torch.jpg"></a>
               <h4>Blys</h4>
             </div>
           </div>
           <div class="col-md-4 text-center">
             <div class="portfolio-item">
-              <a href="#"><img class="img-portfolio img-responsive" src="./assets/img/pakkar-black.jpg"></a>
+              <a href="./?view=list.php&type=packages"><img class="img-portfolio img-responsive" src="./assets/img/pakkar-black.jpg"></a>
               <h4>Pakkar</h4>
             </div>
           </div>
@@ -245,13 +245,15 @@
       });*/
     </script>
     <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>
+(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "https://connect.facebook.net/is_IS/all.js#xfbml=1&appId=251063381611215";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+</script>
 <script type="text/javascript">
 
 $(document).tooltip({

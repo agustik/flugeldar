@@ -147,7 +147,16 @@
     <!-- JavaScript -->
     <script src="./assets/js/jquery-1.10.2.js"></script>
     <script src="./assets/js/bootstrap.js"></script>
-
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/is_IS/all.js#xfbml=1&appId=251063381611215";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
   </body>
 
 </html>
