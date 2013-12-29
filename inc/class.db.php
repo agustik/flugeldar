@@ -3,7 +3,7 @@
 
 class db {
 	private function dbConnection() {
-		include_once('../config.php');
+		include_once('config.php');
         $db_pdo_type = DB_PDO_TYPE;
         $db_database = DB_DATABASE;
 		$db_username = DB_USERNAME;
