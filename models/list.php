@@ -54,27 +54,19 @@
         </div>
 
       </div>
-
-
+      <div class="">
         <?php
 
           $limit = 4; $i = 0;
            foreach ($items as $item) {
             $name = $item['name'];
             $src = $item['src'];
-            if($i = 0){
-              print "<div class='row'>";
-            }
               print "<div class='col-md-3 portfolio-item'><a href='portfolio-item.html'><img class='img-responsive' src='http://placehold.it/750x450'></a></div>";
-            $i++;
-            if($i = 3){
-              print "</div>";
-              $i = 0;
             }
           }
 
         ?>
-
+      </div>
 
       <hr>
       <!--
