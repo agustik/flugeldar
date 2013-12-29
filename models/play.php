@@ -57,7 +57,7 @@
 
         <div class="col-md-8">
           <!--<img class="img-responsive" src="http://placehold.it/750x500">-->
-          <video id="example_video_1" class="video-js vjs-default-skin"
+          <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
             controls preload="auto" width="750" height="500"
             poster="./assets/img/flugelda-icon/750x500/orlygsstadabardagi_2.png"
             data-setup='{"example_option":true}'>
