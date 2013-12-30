@@ -76,7 +76,7 @@
             $src = $item['src'];
             $price = (int)$item['price'];
             $id = $item['id'];
-            $image = DIR_BASE . "assets/img/flugelda-icon/750x500/". $src .".png";
+            $image = "./assets/img/flugelda-icon/750x500/". $src .".png";
             $link = "./?view=play.php&video=$id&autoplay=true";
             $tooltip = $name . ' - ' . PrettyPrintCurrency($price) . ' ' . $locale->currency;
             if (!file_exists($image)){
