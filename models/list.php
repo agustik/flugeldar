@@ -79,13 +79,13 @@
             $image = "./assets/img/flugelda-icon/750x500/". $src .".png";
             $link = "./?view=play.php&video=$id&autoplay=true";
 
-            $price_text = PrettyPrintCurrency($price) . ' ' . $locale->currency;
+            $price_text = " - ". PrettyPrintCurrency($price) . ' ' . $locale->currency;
 
             if($price < 1){
               $price_text = "";
             }
 
-            $tooltip = $name . ' - ' . $price_text;
+            $tooltip = $name . $price_text;
 
             if (!file_exists($image)){
               $image = "./assets/img/" . $type .".png";
