@@ -90,12 +90,12 @@
           </video>
           <div >
             <ul id="myTab" class="nav nav-tabs">
-              <li class="active"><a href="#home" data-toggle="tab">Verð</a></li>
-              <li class=""><a href="#home" data-toggle="tab">Lýsing</a></li>
-              <li class=""><a href="#profile" data-toggle="tab">Upplýsingar</a></li>
+              <li class="active"><a href="#price" data-toggle="tab">Verð</a></li>
+              <li class=""><a href="#description" data-toggle="tab">Lýsing</a></li>
+              <li class=""><a href="#stats" data-toggle="tab">Upplýsingar</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
-              <div class="tab-pane fade active in" id="description">
+              <div class="tab-pane fade active in" id="price">
                 <?php
                   print $price . " " . $locale->currency;
                 ?>
