@@ -81,7 +81,7 @@
 
           <!--<img class="img-responsive" src="http://placehold.it/750x500">-->
           <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
-            controls preload="auto" width="750" height="500"
+            controls preload="auto" width="100%" height="500"
             poster="<?php print $poster; ?>"
             data-setup='<?php print $parameters; ?>'>
            <source src="<?php print $mp4; ?>" type='video/mp4' />
@@ -105,7 +105,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 fbc">
           <div class="fb-comments" data-href="<?php print CurrentUrl(); ?>" data-numposts="5" data-colorscheme="light" data-width="390" ></div>
         </div>
 
@@ -155,6 +155,7 @@
     <script src="./assets/video-js/video.js"></script>
     <div id="fb-root"></div>
   <script>
+  /* facebook sdk */
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -164,13 +165,20 @@
   }(document, 'script', 'facebook-jssdk'));
   </script>
   <script>
-$(document).tooltip({
-  selector : '[data-toggle="tooltip"]'
-});
 
-  videojs.options.flash.swf = "./assets/video-js/video-js.swf"
-  </script>
-  <script>
+  (function(e,t){
+    var w = $(e).width();
+    $(t).attr('data-width', w);
+  }('.fbc','.fb-comments'));
+
+
+  $(document).tooltip({
+    selector : '[data-toggle="tooltip"]'
+  });
+
+  videojs.options.flash.swf = "./assets/video-js/video-js.swf";
+
+  /* Google */
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -178,7 +186,7 @@ $(document).tooltip({
 
   ga('create', 'UA-46120168-1', 'edge.is');
   ga('send', 'pageview');
-
+  /* /Google */
 </script>
   </body>
 
