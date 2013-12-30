@@ -74,14 +74,18 @@
            foreach ($items as $item) {
             $name = $item['name'];
             $src = $item['src'];
-            $src = (int)$item['price'];
+            $price = (int)$item['price'];
             $id = $item['id'];
-            $image = "./assets/img/flugelda-icon/750x500/". $src .".png";
+            $image = DIR_BASE . "assets/img/flugelda-icon/750x500/". $src .".png";
             $link = "./?view=play.php&video=$id&autoplay=true";
             $tooltip = $name . ' - ' . PrettyPrintCurrency($price) . ' ' . $locale->currency;
             if (!file_exists($image)){
               $image = "./assets/img/" . $type .".png";
             }
+          if($debug){
+            print "<!-- $id $src $price  $image  $link  -->";
+          }
+            
          print "<div class='col-md-3 portfolio-item'><a href='$link' data-toggle='tooltip' title='$name'><img class='img-responsive' src='$image'></a></div>";
          }
         ?>
