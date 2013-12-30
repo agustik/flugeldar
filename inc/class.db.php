@@ -62,14 +62,14 @@ class db {
 	        $stmt->execute();
 	        $pdoresult = $stmt->fetch(PDO::FETCH_ASSOC);
 	        $result = array(
-                'src' => $pdoresult['src'],
-                'name' => $pdoresult['name'],
-                'thumbnail' => $pdoresult['thumbnail'],
-                'id' => (int)$pdoresult['id'],
-                'youtube' => $pdoresult['youtube'],
-                'description' => $pdoresult['description'],
-                'views' =>		$pdoresult['views'],
-                'price' =>		$pdoresult['price'],
+                'src' => 			$pdoresult['src'],
+                'name' => 			$pdoresult['name'],
+                'thumbnail' => 		$pdoresult['thumbnail'],
+                'id' => 			(int)$pdoresult['id'],
+                'youtube' => 		$pdoresult['youtube'],
+                'description' => 	$pdoresult['description'],
+                'views' =>			$pdoresult['views'],
+                'price' =>			$pdoresult['price'],
 
             );
 			$db = null;
