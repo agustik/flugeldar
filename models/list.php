@@ -86,7 +86,7 @@
             print "<!-- $id $src $price  $image  $link  -->";
           }
             
-         print "<div class='col-md-3 portfolio-item'><a href='$link' data-toggle='tooltip' title='$name'><img class='img-responsive' src='$image'></a></div>";
+         print "<div class='col-md-3 portfolio-item'><a href='$link' data-toggle='tooltip' title='$tooltip'><img class='img-responsive' src='$image'></a></div>";
          }
         ?>
       </div>
