@@ -56,6 +56,7 @@
              $video_src = $v['src'];
              $name      = $v['name'];
              $description = $v['description'];
+             $price       = $v['price'];
              $view_count       = $v['views'];
              $poster    =   "./assets/img/flugelda-icon/750x500/".$video_src.".png";
              $mp4       =   "./assets/video/mp4/".  $video_src.".mp4";
@@ -89,11 +90,17 @@
           </video>
           <div >
             <ul id="myTab" class="nav nav-tabs">
-              <li class="active"><a href="#home" data-toggle="tab">Lýsing</a></li>
+              <li class="active"><a href="#home" data-toggle="tab">Verð</a></li>
+              <li class=""><a href="#home" data-toggle="tab">Lýsing</a></li>
               <li class=""><a href="#profile" data-toggle="tab">Upplýsingar</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
               <div class="tab-pane fade active in" id="description">
+                <?php
+                  print $price . " " . $locale->currency;
+                ?>
+              </div>
+              <div class="tab-pane fade" id="description">
                 <?php
                   print $description;
                 ?>

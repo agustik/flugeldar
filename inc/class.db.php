@@ -69,6 +69,7 @@ class db {
                 'youtube' => $pdoresult['youtube'],
                 'description' => $pdoresult['description'],
                 'views' =>		$pdoresult['views'],
+                'price' =>		$pdoresult['price'],
 
             );
 			$db = null;
