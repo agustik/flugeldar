@@ -56,7 +56,7 @@
              $video_src = $v['src'];
              $name      = $v['name'];
              $description = $v['description'];
-             $price       = $v['price'];
+             $price       = (int)$v['price'];
              $view_count       = $v['views'];
              $poster    =   "./assets/img/flugelda-icon/750x500/".$video_src.".png";
              $mp4       =   "./assets/video/mp4/".  $video_src.".mp4";
@@ -97,7 +97,7 @@
             <div id="myTabContent" class="tab-content">
               <div class="tab-pane fade active in" id="price">
                 <?php
-                  print $price . " " . $locale->currency;
+                  print PrettyPrintCurrency($price) . " " . $locale->currency;
                 ?>
               </div>
               <div class="tab-pane fade" id="description">

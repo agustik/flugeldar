@@ -1,8 +1,5 @@
 <?php
 
-
-
-
  include_once('config.php');
  $view 		= (array_key_exists('view', $_GET)) 	? $_GET['view'] 		: "main.php";
  $type 		= (array_key_exists('type', $_GET)) 	? $_GET['type'] 		: "cake";
@@ -15,9 +12,12 @@ if($debug){
 	error_reporting(E_ALL);	
 }
 
-
  function CurrentUrl(){
  	return  "http://". $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+ }
+
+ function PrettyPrintCurrency($input){
+ 	return number_format($input, 0,',','.');
  }
 
 /* Inclue the database */

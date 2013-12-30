@@ -74,9 +74,11 @@
            foreach ($items as $item) {
             $name = $item['name'];
             $src = $item['src'];
+            $src = (int)$item['price'];
             $id = $item['id'];
             $image = "./assets/img/flugelda-icon/750x500/". $src .".png";
             $link = "./?view=play.php&video=$id&autoplay=true";
+            $tooltip = $name . ' - ' . PrettyPrintCurrency($price) . ' ' . $locale->currency;
             if (!file_exists($image)){
               $image = "./assets/img/" . $type .".png";
             }
