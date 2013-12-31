@@ -57,7 +57,7 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
             <h2>Velkomin</h2>
-            <p class="lead">Þú getur nálgast vöruúrval<a target="_blank" href="./?view=list.php&type=cake">hér</a> </p>
+            <p class="lead">Þú getur nálgast vöruúrval <a target="_blank" href="./?view=list.php&type=cake">hér</a> </p>
           </div>
         </div>
       </div>
