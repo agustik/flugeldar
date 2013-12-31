@@ -51,13 +51,13 @@
     </div>
     <!-- /Full Page Image Header Area -->
   
-    <!-- Intro 
+    <!-- Intro -->
     <div id="about" class="intro">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-            <h2>Subtle Sidebar is the Perfect Template for your Next Portfolio Website Project!</h2>
-            <p class="lead">This template really has it all. It's up to you to customize it to your liking! It features some fresh photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+            <h2>Velkomin</h2>
+            <p class="lead">Þú getur nálgast vöruúrval<a target="_blank" href="./?view=list.php&type=cake">hér</a> </p>
           </div>
         </div>
       </div>
